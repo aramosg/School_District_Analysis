@@ -39,6 +39,24 @@ My theory for this big change is the way we are calculating the mean versus how 
 
 ### 4. How does replacing the ninth-grade scores affect the following:
 #### Math and reading scores by grade
+The math and reading scores for the whole set of data was unchanged. We are segregating by grade, so the expected result is to see a change in the 9th grade notes only. As you can see in the images below, we can confirm our hipotheis. We can see a "NaN" for Thomas High School 9th grade. The rest of the grades remain the same.
+
+Showing the math and reading scores by grade **before** replacing the 9th graders notes with NaN:
+
+Math scores by grade
+![Before - Math scores by grade](/resources/04_01_before_math_by_grade.png)
+
+Reading scores by grade
+![Before - Reading scores by grade](/resources/04_01_before_reading_by_grade.png)
+
+Now showing the scores **after** replacing the 9th graders notes witn NaN:
+
+Math scores by grade
+![After - Math scores by grade](/resources/04_01_after_math_by_grade.png)
+
+Reading scores by grade
+![After - Reading scores by grade](/resources/04_01_after_reading_by_grade.png)
+
 #### Scores by school spending
 #### Scores by school size
 #### Scores by school type

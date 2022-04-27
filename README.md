@@ -86,6 +86,17 @@ Data analysis after the replacement of data with NaN
 
 
 #### 4.4 Scores by school type
+Again, no change can be observed in the data analysis by school type. See the images below. Please note Thomas High School belong to the **"Charter"** scholl type.
+
+Data analysis before the replacement of data with NaN
+
+![Before - Scores by school type](/resources/04_04_before_type_summary.png)
+
+Data analysis after the replacement of data with NaN
+
+![After - Scores by school type](/resources/04_04_after_type_summary.png)
+
+
 
 ## Summary
 Summarize four changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs.

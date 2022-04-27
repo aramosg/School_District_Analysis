@@ -38,26 +38,41 @@ For the percentage, the story goes the opposite direction. Variations are dramat
 My theory for this big change is the way we are calculating the mean versus how we are calculating the percentages. For the mean, we are using the pandas MEAN method, which automatically ignore the "NaNs" by default. To calculate the percentages, we are considering a student count of 39170. This number includes Thomas High School (THS) 9th grades. Since this students do not have grades, this has a big impact in the calculations.  
 
 ### 4. How does replacing the ninth-grade scores affect the following:
-#### Math and reading scores by grade
+#### 4.1 Math and reading scores by grade
 The math and reading scores for the whole set of data was unchanged. We are segregating by grade, so the expected result is to see a change in the 9th grade notes only. As you can see in the images below, we can confirm our hipotheis. We can see a "NaN" for Thomas High School 9th grade. The rest of the grades remain the same.
 
 Showing the math and reading scores by grade **before** replacing the 9th graders notes with NaN:
 
 Math scores by grade
+
 ![Before - Math scores by grade](/resources/04_01_before_math_by_grade.png)
 
 Reading scores by grade
+
 ![Before - Reading scores by grade](/resources/04_01_before_reading_by_grade.png)
 
 Now showing the scores **after** replacing the 9th graders notes witn NaN:
 
 Math scores by grade
+
 ![After - Math scores by grade](/resources/04_01_after_math_by_grade.png)
 
 Reading scores by grade
+
 ![After - Reading scores by grade](/resources/04_01_after_reading_by_grade.png)
 
-#### Scores by school spending
+#### 4.2 Scores by school spending
+The scores are exactly same before and after the replacement of the Thomas High School 9th grades notes. See the images below:
+
+Before replacing the 9th grades with NaN
+
+![Before - Scores by school spending](/resources/04_02_before_spending_summary.png)
+
+After replacing the 9th grades with NaN
+
+![After - Scores by school spending](/resources/04_02_after_spending_summary.png)
+
+
 #### Scores by school size
 #### Scores by school type
 

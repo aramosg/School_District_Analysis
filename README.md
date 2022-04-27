@@ -62,7 +62,7 @@ Reading scores by grade
 ![After - Reading scores by grade](/resources/04_01_after_reading_by_grade.png)
 
 #### 4.2 Scores by school spending
-The scores are exactly same before and after the replacement of the Thomas High School 9th grades notes. See the images below:
+The scores are exactly same before and after the replacement of the Thomas High School 9th grades notes. See the images below. Please note that the Thomas High School belongs to the **"$631-645"** spending range.
 
 Before replacing the 9th grades with NaN
 
@@ -73,8 +73,19 @@ After replacing the 9th grades with NaN
 ![After - Scores by school spending](/resources/04_02_after_spending_summary.png)
 
 
-#### Scores by school size
-#### Scores by school type
+#### 4.3 Scores by school size
+Similarly to the analysis by spending, the analysis by school size is not being affected. Statistics remain the same. Please, see the images below. Note that Thomas High School is classifed as a **Medium sized school**
+
+Data analysis before the replacement of data with NaN
+
+![Before - Scores by school size](/resources/04_03_before_size_summary.png)
+
+Data analysis after the replacement of data with NaN
+
+![After - Scores by school size](/resources/04_03_after_size_summary.png)
+
+
+#### 4.4 Scores by school type
 
 ## Summary
 Summarize four changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs.

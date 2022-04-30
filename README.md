@@ -2,7 +2,7 @@
 # Unit Challenge
 
 ## Overview of the school district analysis
-We have being asked to perform data analysis on a given data set, containing data from different school. The main purpose of analyzing this data is to detect trends in school performance. The analysis we deliver well support the School Board in making decisions about budget and priorities. 
+We have being asked to perform a data analysis on a given data set, containing data from different schools. The main purpose of analyzing this data is to detect trends in school performance. The analysis we will be delivering will support the School Board in making decisions about budget and priorities. 
 
 After delivering the initial analysis, we have been informed about the suspicion of academic dishonesty, specifically for the 9th grade in the Thomas High School scores. We will be removing these grades and do the analysis again. We will discover how these changes affect the results of the analysis. 
 
@@ -14,7 +14,7 @@ This is a snapshot showing he district analysis before removing the reading and 
 and after the removal of the Thomas High School 9th graders grades:
 ![District summary with no Thomas High Schools 9th graders](/resources/01_after_district_summary.png)
 
-As we can see, the only metric which remain the same is the **average reading score**. All other metrics are reporting a slight decrease. 
+As we can see, the only metric which remains the same is the **average reading score**. All other metrics are reporting a slight decrease. 
 
 ### 2. How is the school summary affected?
 This is a snapshot showing the school summary before removing the reading and math scores from Thomas High School 9th graders:
@@ -23,7 +23,7 @@ This is a snapshot showing the school summary before removing the reading and ma
 and after the removal of the Thomas High School 9th graders:
 ![District summary with no Thomas High Schools 9th graders](/resources/02_after_school_summary.png)
 
-In this analysis (school summary), we see some significant changes. The average math and reading scores are slightly changing, but nothing dramatic. Generaly speaking, you can barely see the differences. It is a different story with the passing percentages for Thomas High School. The passing percentages for reading, math, and overall are observing a dramatic drop.
+In this analysis (school summary), we see some significant changes. The average math and reading scores are slightly changing, but nothing dramatic. Generaly speaking, you can barely see the differences. For the passing percentages for Thomas High School is a different story. The passing percentages for reading, math, and overall are observing a dramatic drop.
 
 ### 3. How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
 As highlighted in the previous question, the average scores for reading and math remain almost the same:
@@ -35,7 +35,7 @@ For the percentage, the story goes the opposite direction. Variations are dramat
 - Percentage passing reading: 97.30 vs 69.66 (dramatic decrease)
 - Overall passing percentage: 90.94 vs 65.07 (dramatic decrease)
 
-My theory for this big change is the way we are calculating the mean versus how we are calculating the percentages. For the mean, we are using the pandas MEAN method, which automatically ignore the "NaNs" by default. To calculate the percentages, we are considering a student count of 39170. This number includes Thomas High School (THS) 9th grades. Since this students do not have grades, this has a big impact in the calculations.  
+My theory for this big change is the way we are calculating the mean versus how we are calculating the percentages. For the mean, we are using the **MEAN()** method from Pandas, which automatically ignore the "NaNs" by default. To calculate the percentages, we are considering a student count of 39170. This number includes Thomas High School (THS) 9th grades. Since this students do not have grades, this has a big impact in the calculations. It would be interesting to run the same calculation with the new count of students.   
 
 ### 4. How does replacing the ninth-grade scores affect the following:
 #### 4.1 Math and reading scores by grade
@@ -96,7 +96,27 @@ Data analysis after the replacement of data with NaN
 
 ![After - Scores by school type](/resources/04_04_after_type_summary.png)
 
-
-
 ## Summary
-Summarize four changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs.
+Opposed to what I have thought, the changes of some metrics were not drastically changed. Let's summarize some of these:
+
+### District summary
+After removing the Thomas High School (THS) 9th grades notes, the only metric with a **slight** decrease was the average reading score. 
+
+### School summary
+The overall passing percentage was dramatically reduced. It went from 90.94% to 65.07%, decreasing almost 26 points. 
+
+### Thomas High School performances vs other Schools
+We could observe some differences in the THS individual performance:
+- Average math score: 83.41 vs 83.35 (slight decrease)
+- Average reading score: 83.84 vs 83.89 (slight increase)
+
+For the percentage, the story goes the opposite direction. Variations are dramatic:
+- Percentage passing math: 93.27 vs 66.91 (dramatic decrease)
+- Percentage passing reading: 97.30 vs 69.66 (dramatic decrease)
+- Overall passing percentage: 90.94 vs 65.07 (dramatic decrease)
+
+### Scores by spending, size, and type
+These three metrics were unaffected. 
+
+## Conclusion
+It is really interesting to see how the different metrics change as we dig deeper into the data. I can observe that in high level analysis, such as "Scores by size", no changes are visible in the reports. When it comes to the individual performance of the Thomas High School, that is when we can see some differences in the reports. It would be interesting replacing the NaNs with a zero. Also, a good exercise could be omit the 9th graders notes from all schools. Another interesting drill could be replacing all 9th graders notes with a value under the "pass" threshold. In the latter case, I can imagine the impact would be huge. If the hyphotesis of academic dishonesty is confirmed, the reason why they did it may be there, in the data. Are they trying to get more budget? Be a more attractive school for prospective students? Only the data and a meticulous investigation will tell. 
